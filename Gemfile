@@ -14,6 +14,7 @@ gem 'delayed_job_active_record', '0.3.3'
 gem 'redis',         '3.0.2'
 gem 'daemons',       '1.1.9'
 gem 'json',          '1.7.7'
+gem 'oauth-plugin',  '0.4.1'
 
 group :development do
   gem 'debugger', '1.2.2'
