@@ -14,12 +14,12 @@ gem 'delayed_job_active_record', '0.3.3'
 gem 'redis',         '3.0.2'
 gem 'daemons',       '1.1.9'
 gem 'json',          '1.7.7'
-gem 'oauth-plugin',  '0.4.1'
+gem 'oauth',         '0.4.7'
 
 group :development do
-  gem 'debugger', '1.2.2'
   gem 'wirble'
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'simple_oauth',  '0.2.0'
+  gem 'what_methods'
 end
 
 group :test do
