@@ -1,7 +1,7 @@
 require 'random_gen'
 require 'ok_redis'
 require 'reaper'
-
+require 'two_legged_oauth'
 
 module ActiveModel
   class Errors
