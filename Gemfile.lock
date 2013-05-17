@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/ctran/annotate_models.git
+  remote: https://github.com/ctran/annotate_models.git
   revision: 8bd159c7a484093fde84beaa9e6398f25ddacf09
   specs:
     annotate (2.6.0.beta1)
@@ -8,6 +8,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: http://gems.github.com/
   specs:
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
@@ -45,6 +46,7 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     builder (3.0.4)
+    choice (0.1.6)
     cocaine (0.4.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -128,6 +130,11 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails-erd (1.1.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      choice (~> 0.1.6)
+      ruby-graphviz (~> 1.0.4)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -140,6 +147,7 @@ GEM
       json (~> 1.4)
     redis (3.0.2)
     ref (1.0.4)
+    ruby-graphviz (1.0.9)
     ruby-hmac (0.4.0)
     sass (3.2.8)
     sass-rails (3.2.6)
@@ -193,6 +201,7 @@ DEPENDENCIES
   mysql2 (= 0.3.11)
   paperclip (= 3.3.1)
   rails (= 3.2.13)
+  rails-erd
   redis (= 3.0.2)
   sass-rails (~> 3.2.3)
   therubyracer

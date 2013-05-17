@@ -43,7 +43,9 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    err_message = nil
+        posted_data = params[:user]
+	puts "RAW DATA : #{posted_data}"
+    err_message = nil  
 
     @user = current_app.find_or_create_subscribed_user(params[:user])
     err_message = "Could not create that user." if @user.nil?

@@ -3,7 +3,7 @@ development:
   encoding: utf8
   database: leaderboard_dev
   username: root
-  password: 
+  password: azerty5* 
   host: localhost
   port: 3306
 
@@ -15,8 +15,10 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: leaderboard_test 
-  host: 127.0.0.1 
+  database: leaderboard_dev
+  username: root
+  password: azerty5*
+  host: localhost
   port: 3306
 
 production:

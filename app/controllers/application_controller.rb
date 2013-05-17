@@ -1,7 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :set_headers
   before_filter :set_access
   helper_method :current_developer
+
+  private
+  def set_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Expose-Headers'] = 'ETag'
+    headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD'
+    headers['Access-Control-Allow-Headers'] = '*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match'
+    headers['Access-Control-Max-Age'] = '86400'
+  end
+
 
   private
   def current_developer_session
@@ -44,8 +55,8 @@ class ApplicationController < ActionController::Base
           render status: :forbidden, text: "Requires API Access"
         }
         format.json {
-          message = params[:app_key] ? "Could not find an app by that app_key."
-                                     : "Please pass an app_key with your request."
+          message = params[:app_key] ? "Could not find an app by that app_key PARAMS: #{params.inspect}"
+                                     : "Please pass an app_key with your request. PARAMS: #{params.inspect}"
           render status: :forbidden, json: {message: message}
         }
       end

@@ -1,7 +1,18 @@
 class ScoresController < ApplicationController
+  before_filter :set_headers
   before_filter :require_dashboard_access, :only   => [:destroy]
   before_filter :require_api_access,       :except => [:destroy]
   before_filter :set_leaderboard,          :except => [:destroy]
+
+  private
+  def set_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Expose-Headers'] = 'ETag'
+    headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD'
+    headers['Access-Control-Allow-Headers'] = '*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match'
+    headers['Access-Control-Max-Age'] = '86400'
+  end
+
 
   def index
     since = params[:since] && Time.parse(params[:since].to_s)

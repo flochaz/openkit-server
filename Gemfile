@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
+source 'http://gems.github.com'
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'rails-erd'
 gem 'mysql2', '0.3.11'
 gem 'authlogic',    '3.1.3'
 gem 'friendly_id',  '4.0.9'
@@ -21,7 +22,7 @@ group :development do
   gem 'thin'
   gem 'debugger', '1.2.2'
   gem 'wirble'
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
 end
 
 group :test do
