@@ -1,6 +1,11 @@
 class AppsController < ApplicationController
   before_filter :require_dashboard_access, :except => [:purge_test_data]
+  before_filter :set_headers
 
+  def set_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+  end
+  
   # GET /apps
   # GET /apps.json
   def index

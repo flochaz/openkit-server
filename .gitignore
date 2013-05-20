@@ -4,6 +4,7 @@
 capybara-*.html
 .rspec
 /.bundle
+/vendor/cache
 /vendor/bundle
 /log/*
 /tmp/*
@@ -13,4 +14,5 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 rerun.txt
+
 pickle-email-*.html
