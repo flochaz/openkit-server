@@ -60,43 +60,31 @@ $ vmc target api.cloudfoundry.com
 Setting target to https://api.cloudfoundry.com... OK                                                                                                                                                                                                                        
 $ vmc login                                                                                                                                                                                                                        
 target: https://api.cloudfoundry.com                                                                                                                                                                                                                                        
-
 Email> florianchazal@gmail.com                                                                                                                                                                                                                                              
-
 Password>                                                                                                                                                                                                                                                         
-
 Authenticating... OK
-
 $ vmc push                                                                                                                                                                                                                         
 Name> myOwnOpenkit-server
-
 Instances> 1
-
 1: rails3
 2: other                                                                                                                                                                                                                                                                    
 Framework> rails3                                                                                                                                                                                                                                                           
-
 1: ruby18                                                                                                                                                                                                                                                                   
 2: ruby19                                                                                                                                                                                                                                                                   
 3: other                                                                                                                                                                                                                                                                    
 Runtime> 2                                                                                                                                                                                                                                                                  
-
 1: 64M                                                                                                                                                                                                                                                                      
 2: 128M                                                                                                                                                                                                                                                                     
 3: 256M                                                                                                                                                                                                                                                                     
 4: 512M                                                                                                                                                                                                                                                                     
 5: 1G                                                                                                                                                                                                                                                                       
 Memory Limit> 256M                                                                                                                                                                                                                                                          
-
 Creating myOwnOpenkit-server... OK                                                                                                                                                                                                                                          
-
 1: myOwnOpenkit-server.cloudfoundry.com                                                                                                                                                                                                                                     
 2: none                                                                                                                                                                                                                                                                     
 Domain> myOwnOpenkit-server.cloudfoundry.com    
 Updating myOwnOpenkit-server... OK                                                                                                                                                                                                                                          
-
 Create services for application?> y                                                                                                                                                                                                                                         
-
 1: mongodb 2.0                                                                                                                                                                                                                                                              
 2: mysql 5.1                                                                                                                                                                                                                                                                
 3: postgresql 9.0                                                                                                                                                                                                                                                           
@@ -105,16 +93,12 @@ Create services for application?> y
 6: redis 2.4                                                                                                                                                                                                                                                                
 7: redis 2.2                                                                                                                                                                                                                                                                
 What kind?> 2                                                                                                                                                                                                                                                               
-
 Name?> mysql-f26b8                                                                                                                                                                                                                                                          
-
 Creating service mysql-f26b8... OK                                                                                                                                                                                                                                          
 Binding mysql-f26b8 to myOwnOpenkit-server... OK                                                                                                                                                                                                                            
 Create another service?> n  
 Bind other services to application?> n                                                                                                                                                                                                                                      
-
 Save configuration?> y                                                                                                                                                                                                                                                      
-
 Saving to manifest.yml... OK                                                                                                                                                                                                                                                
 Uploading myOwnOpenkit-server... OK                                                                                                                                                                                                                                         
 Starting myOwnOpenkit-server... OK                                                                                                                                                                                                                                          
