@@ -66,7 +66,9 @@ Email> florianchazal@gmail.com
 Password> ********                                                                                                                                                                                                                                                          
                                                                                                                                                                                                                                                                             
 Authenticating... OK
+</pre>
 
+<pre>
 $ vmc push                                                                                                                                                                                                                         
 Name> myOwnOpenkit-server
 
