@@ -63,12 +63,10 @@ target: https://api.cloudfoundry.com
                                                                                                                                                                                                                                                                             
 Email> florianchazal@gmail.com                                                                                                                                                                                                                                              
                                                                                                                                                                                                                                                                             
-Password> ********                                                                                                                                                                                                                                                          
+Password>                                                                                                                                                                                                                                                         
                                                                                                                                                                                                                                                                             
 Authenticating... OK
-</pre>
 
-<pre>
 $ vmc push                                                                                                                                                                                                                         
 Name> myOwnOpenkit-server
 
