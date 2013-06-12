@@ -1,6 +1,6 @@
 class ScoresController < ApplicationController
   before_filter :require_dashboard_access, :only   => [:destroy]
-  before_filter :require_api_access,       :except => [:destroy]
+  before_filter :require_api_access,       :except => [:destroy, :show]
   before_filter :set_leaderboard,          :except => [:destroy]
 
   def index
