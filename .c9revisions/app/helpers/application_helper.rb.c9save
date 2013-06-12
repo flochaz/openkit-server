@@ -1,1 +1,0 @@
-{"ts":1368982904923,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"module ApplicationHelper\n  def logging_in?\n    request.path == login_path\n  end\n\n  def display_login?\n    !current_developer && !logging_in?\n  end\n\n  def display_logout?\n    !!current_developer\n  end\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":204}]],"length":204}
