@@ -60,7 +60,7 @@ class Score < ActiveRecord::Base
           rank_cond[0] << " AND sort_value > ?"
           rank_cond << best_score.sort_value
           sanitized_rank_cond = ActiveRecord::Base.send(:sanitize_sql_array, rank_cond)
-          best_score.rank = connection.execute("select count(*) from (select * from scores where #{sanitized_rank_cond} group by user_id) t").first[0] + 1
+          best_score.rank = connection.execute("select count(*) from (select * from scores where #{sanitized_rank_cond}) t").first[0] + 1
         end
       end
 

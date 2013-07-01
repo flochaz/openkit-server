@@ -16,5 +16,5 @@ capybara-*.html
 **.orig
 rerun.txt
 history
-
+.c9revisions
 pickle-email-*.html

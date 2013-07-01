@@ -1,12 +1,12 @@
 class ScoresController < ApplicationController
   before_filter :require_dashboard_access, :only   => [:destroy]
-  before_filter :require_api_access,       :except => [:destroy, :show]
+  before_filter :require_api_access,       :except => [:destroy]
   before_filter :set_leaderboard,          :except => [:destroy]
 
   def index
     since = params[:since] && Time.parse(params[:since].to_s)
     user_id = params[:user_id].to_i
-    @scores = @leaderboard.top_scores_with_users_best(user_id, since)
+    @scores = @leaderboard.scores
     ActiveRecord::Associations::Preloader.new(@scores, [:user]).run
 
     respond_to do |format|
@@ -17,7 +17,7 @@ class ScoresController < ApplicationController
 
   def show
     @score = @leaderboard.scores.find(params[:id].to_i)
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @score }
