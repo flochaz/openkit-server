@@ -19,7 +19,7 @@ gem 'aws-sdk',       '1.9.5'
 
 group :development do
   gem 'fog'
-  gem 'thin'
+#  gem 'thin'
   gem 'debugger', '1.2.2'
   gem 'wirble'
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
